@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="libs/bootstrap-5.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <link rel="icon" href="img/icon/logo7_.png" type="image/x-icon">
+
+  <title>rehaap.com</title>
+</head>
+<!--booststrap v 5.0.2-->
+<header class="container-fluid bg-dark d-flex justify-content-center">
+  <p class="text-light mb-0 p-2"></p> <img src="img/icon/logo7_.png" height="30px" alt="logoRehap" srcset="">
+</header>
+<!--modal mensaje -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">REHAPP</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="h3 text-medium text-center mb-5">
+          ¿Quieres recibir información sobre nosotros, nuestros productos y
+          mejoras en nuestra aplicación? ¿Tienes dudas, sugerencias...?
+        </p>
+        <p>La comunicación contigo es nuestra inspiración para mejorar.</p>
+        <form action="database/forms/form.php" method="get">
+          <select class="form-select" aria-label="Default select example" name="perfil">
+            <option selected>Selecciona una opción</option>
+            <option value="1">Terapeuta de mano</option>
+            <option value="2">Fisioterapeuta/kinesiólogo</option>
+            <option value="3">Paciente</option>
+          </select>
+
+          <div class="row">
+            <div class="col">
+              <input type="text" name="name" class="form-control" placeholder="Nombre" aria-label="Nombre" required />
+            </div>
+            <div class="col">
+              <input type="text" name="lastname" class="form-control" placeholder="Apellido" aria-label="Apellido" />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="correo@example.com"
+              required />
+          </div>
+          <div class="mb-3">
+            <label for="number" class="form-label">numero de contacto</label>
+            <input type="number" name="phonenumber" class="form-control" id="number" placeholder="ingresa tu numero"
+              required />
+          </div>
+          <div class="mb-3">
+            <label for="menssage" class="form-label">Déjanos tu mensaje</label>
+            <textarea class="form-control" name="menssage" id="menssage" rows="3"
+              placeholder="Hola, quiero saber sobre..." required></textarea>
+          </div>
+          <div class="mb-3">
+            <div class="form-check">
+              <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3"
+                aria-describedby="invalidCheck3Feedback" required />
+              <label class="form-check-label" for="invalidCheck3">
+                <p>Estás de acuerdo en que tratemos tus datos</p>
+              </label>
+              <div id="invalidCheck3Feedback" class="invalid-feedback">
+                <small>Nos comprometemos a proteger y respetar tu
+                  privacidad.</small>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit">Enviar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Cerrar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal politicas de privacidad-->
+<div class="modal fade" id="pP" tabindex="-1" aria-labelledby="pP" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Politica de Privacidad</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>aca va la politica de no se que coños. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Quo ex repellendus quaerat quis! Nam libero voluptatem fugit reiciendis dolorum eaque quas dolorem
+          sequi, suscipit animi minima commodi, adipisci rem a!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal de politicas de seguridad-->
+<div class="modal fade" id="pS" tabindex="-1" aria-labelledby="pS" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Politica de Seguridad</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>POLITICAS DE SEGURIDAD VAN EN ESTA PARTEiqwhbhqbduwhbuhwbuhbh</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--condiciones-->
+<div class="modal fade" id="cC" tabindex="-1" aria-labelledby="cC" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Condiciones</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>requisitos minimos</p><br>
+        <ul>
+          <li>historial clinico</li>
+          <li>dispositivo Android v 18 o superior</li>
+          <li>xbox 360</li>
+          <li>internet</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--nav bar-->
+<nav class="navbar navbar-expand-md navbar-light  p-3" id="navBar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="img/logos/logoHeader.png" alt="rehaap.com" width="30" height="24" class="d-inline-block align-text-top">
+      rehaap
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            acerca de :
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#ancla1">nosotros</a></li>
+            <li><a class="dropdown-item" href="#ancla2">app</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#ancla3">terapias</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <button class="btn btn-light " type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          ¡ayuda, sugerencias!
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
+<!--flotante-->
+<div class="floating-button">
+  <a href="https://chat.whatsapp.com/Ed7S4Z3nQwYLgJLr3AlAno" target="_blank">
+    <img src="img/icon/whatsapp.png" alt="WhatsApp Icon">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+</div>
+<!-- seccion1  -->
+<div class="container-fluid primera_seccion" id="ancla3">
+  <div class="container-fluid p-5">
+    <div class="row align-items-center">
+      <div class="col sm-12 md-4 lg-4">
+        <div class="card" style="width: 18rem">
+          <h5 class="card-title text-center">Terapia De Dedos</h5>
+          <div class="image-container">
+            <img src="img/terapia-de-manos.jpg " class="card-img-top img-fluid" alt="..." />
+            <p class="overlay-text">nos centramos en nuestras herraminetas de trabajo</p>
+          </div>
+          <div class="card-body">
+            
+          </div>
+        </div>
+      </div>
+      <div class="col sm-12 md-4 lg-4">
+        <div class="card" style="width: 18rem" name="manos">
+          <h5 class="card-title text-center">Terapia de Manos</h5>
+          <div class="image-container">
+            <img src="img/terapia-manual.jpg" class="card-img-top img-fluid" alt="..." />
+            <p class="overlay-text">esta es una descripvion. lorem*15</p>
+          </div>
+          <div class="card-body">
+    
+          </div>
+        </div>
+      </div>
+      <div class="col sm-12 md-4 lg-4">
+        <div class="card" style="width: 18rem">
+          <h5 class="card-title text-center">Sesiones Personalizadas</h5>
+          <div class="image-container">
+            <img src="img/segundaimagen.png  " class="card-img-top img-fluid" alt="..." />
+            <ul class="overlay-text">
+
+              <li>videos</li>
+              <li>profesionales</li>
+              <li>rutinas Personalizadas</li>
+
+            </ul>
+          </div>
+          <div class="card-body">
+    
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section>
+    <div class="row d-md-flex justify-content-center">
+      <div class="col-12 d-none d-sm-block col-md-6 col-lg-3 p-lg-5 mb-3">
+        <img src="img/gestosHand.png" class="img-fluid" alt="gestosManos">
+
+      </div>
+      <div class="col-12 col-md-8 col-lg-6 mb-3">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/terapia-manual.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption">
+                <h5>Rutinas desde casa</h5>
+                <p class="d-none d-sm-block">no tienes que salir de tu casa para realizar rutinas , con tu disposotivo
+                  movil puedes acceder a ellas desde tu cas</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/terapia-manual.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption">
+                <h5>Guarda tu progreso</h5>
+                <p class="d-none d-sm-block">manejamos un historial que te indica donde quedaste y donde debes seguir
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/terapia-manual.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption">
+                <h5>¿otra aplicacion mas?</h5>
+                <p class="d-none d-sm-block">Detras del desarrollo hay una selecion de rutinas ;ademas cuentaas con
+                  profesionales a tu alcance
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 p-lg-5 mb-3 ">
+        <img src="img/brazosector.png" class="img-fluid brazoSec" alt="brazosEnSeccion" usemap="#workmap">
+        <p class="d-none" style="font-size:30px" id="linkrehapp">para un mejor desarrollo de terapias descargal <a
+            href="">rehapp</a></p>
+        <map name="workmap">
+          <area id="area1" alt="oytr" title="oytr" href=""
+            coords="202,200,161,105,58,210,107,192,67,190,97,178,41,176,36,159,91,156,33,146,32,153,94,140,48,119,50,106,105,121,132,158"
+            shape="rect">
+          <area id="area2" target="" alt="mmm" title="mmm" href=""
+            coords="107,191,70,201,64,192,101,177,42,174,39,164,92,157,36,148,35,141,94,142,44,120,50,106,103,119"
+            shape="poly">
+        </map>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- seccion2 ya seccion verde -->
+<div class="container-fluid">
+  <section class="infoR">
+    <span>
+      <h2>Rehabilitación de la mano, muñeca y dedos</h2>
+      <h5>Do the things you do ,but better</h5>
+    </span>
+  </section>
+</div>
+<!-- seccion3  ya  seccion de carruosulk -->
+<div class="container-fluid sector3">
+  <div class="container m-2" name="anlcla1" id="ancla1">
+    <div class=" row">
+      <div class="col-sm-12  col-md-3 ">
+        <img src="img/logos/tmp---removebg-preview.png" width="100px" height="100px" class="img-thumbnail"
+          alt="logoRehapp">
+
+        <h5>mas que una aplicacion movil</h5>
+      </div>
+      <div class="col-12 col-md-9 " id="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/imgCarrousel/aboutUs.png" class="d-block w-100" alt="aboutUs">
+            </div>
+            <div class="carousel-item">
+              <img src="img/imgCarrousel/mision.png" class="d-block w-100" alt="mision">
+            </div>
+            <div class="carousel-item">
+              <img src="img/imgCarrousel/vision.png" class="d-block w-100" alt="vision">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">next</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- seccion 4  tarjetas  ya interfaz de celuylar-->
+<div class="container-fluid tree p-5 text-center" name="ancla2" id="ancla2">
+  <h2 class=" text-center">REHABILITACION</h2>
+  <h5 class="text-center">conoce la App</h5>
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <div class="card rounded" style="width: 18rem;">
+        <img src="img/interfaz/intefazCel-removebg-preview.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">inicio de sesion</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <div class="card rounded" style="width: 18rem;">
+        <img src="img/interfaz/intefazCel-removebg-preview.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">terapias disponibles</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <div class="card rounded" style="width: 18rem;">
+        <img src="img/interfaz/intefazCel-removebg-preview.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">progreso</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <div class="card rounded" style="width: 18rem;">
+        <img src="img/interfaz/intefazCel-removebg-preview.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">sesiones personalizadas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- seccion 5  video cuadrar video-->
+<div class="container-fluid" id="seccion4">
+  <div class="container-fluid" id="outVideo">
+    <h3 class="text-center">¿Cómo descargar?</h3>
+    <div class="container text-center" id="video">
+      <p>Más detalles <small>haz click en el video</small></p>
+      <input type="checkbox" name="play" id="play">
+      <video class="container" id="videoElement" src="assets/downloadaApp.mp4" controls></video>
+    </div>
+  </div>
+</div>
+<!-- seccion 6 ya  -->
+<div class="container-fluid">
+  <section class="seccion5">
+    <div class="widget widget_blog_subscription">
+      <form action="database/forms/susNl.php" method="get " accept-charset="utf-8" id="subscribe-blog">
+        <p>suscripción a nuestro News letter.</p>
+        <p>
+          <input type="text" name="email" style="width: 95%; padding: 1px 2px" placeholder="ingresa tu email" value=""
+            id="subscribe-field" />
+        </p>
+        <p>
+          <input type="submit" value="inscripción GRATIS" />
+        </p>
+      </form>
+    </div>
+  </section>
+</div>
+
+<!-- seccion 7 botones flotantes-->
+<div class="container-fluid"></div>
+<!-- seccion 9 footer ya-->
+<footer>
+  <div class="container-fluid bg-dark text-center">
+    <div class="container text-light text-center">
+      <h3>your experience in Virtual Reality Whit our application</h3>
+      <br>
+      <p>"En <strong>REHAPP</strong>, estamos comprometidos con la
+        protección de la privacidad de nuestros usuarios. Recolectamos
+        información personal únicamente con el propósito de brindar un
+        servicio de calidad y mejorar la experiencia del usuario. Los datos
+        recopilados, que pueden incluir información personal como nombres,
+        direcciones de correo electrónico y detalles médicos, son tratados
+        con la más estricta confidencialidad y no son compartidos con
+        terceros sin el consentimiento explícito del usuario, excepto cuando
+        sea requerido por la ley. Nos comprometemos a implementar medidas de
+        seguridad apropiadas para proteger la información personal contra
+        accesos no autorizados, alteraciones, divulgaciones o destrucciones
+        no autorizadas. Al utilizar nuestra aplicación, usted acepta
+        nuestras prácticas de privacidad descritas en este
+        documento."</p>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-lg-6 bg-blue">
+        <div class="container pb-1">
+          <ul class="redes">
+            <li class="icon facebook">
+              <span class="tooltip">Facebook</span>
+              <span><i class="fab fa-facebook-f"></i></span>
+            </li>
+            <li class="icon instagram">
+              <span class="tooltip">Instagram</span>
+              <span><i class="fab fa-instagram"></i></span>
+            </li>
+            <li class="icon youtube">
+              <span class="tooltip">Youtube</span>
+              <span><i class="fab fa-youtube"></i></span>
+            </li>
+          </ul>
+
+          <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+            integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+            crossorigin="anonymous"></script>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-6 bg-gray">
+
+        <div class="dropdown pb-1">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Terminos y Condiciones
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#pP" href="#pP">Politica de Privacidad</a>
+            </li>
+            <li>
+              <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#pS" href="#pS">Politica de Seguridad</a>
+            </li>
+            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#cC" href="#cS">Condiciones</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="footer-page">
+  <div class="row">
+    <div class="col-12" id="last">
+      <p><small>¡Gracias por visitar nuestro sitio web!</small></p>
+      <p><small>© 2022 Todos los derechos reservados</small></p>
+    </div>
+  </div>
+</div>
+
+<body>
+  <!--boostraop v5.0.2-->
+  <script src="js/main.js" enabled></script>
+  <script src="libs/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
