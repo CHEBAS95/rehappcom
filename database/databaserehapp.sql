@@ -37,6 +37,9 @@ CREATE TABLE `menssagesuser` (
   `menssage` varchar(2000) NOT NULL COMMENT 'mensaje a leer '
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
+ALTER TABLE menssagesuser MODIFY COLUMN phonenumber VARCHAR(15) NOT NULL COMMENT 'numero de contacto';
+
 --
 -- Volcado de datos para la tabla `menssagesuser`
 --

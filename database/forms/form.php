@@ -14,13 +14,17 @@ if (!$connection) {
 }
 
 // Obtiene los datos del formulario
-$perfil = isset($_GET['perfil']) ? $_GET['perfil'] : '';
-$name = isset($_GET['name']) ? $_GET['name'] : '';
-$lastname = isset($_GET['lastname']) ? $_GET['lastname'] : '';
-$phonenumber=isset($_GET['phonenumber']) ? $_GET['phonenumber']:'';
-$email = isset($_GET['email']) ? $_GET['email'] : '';
-$menssage = isset($_GET['menssage']) ? $_GET['menssage'] : '';
+$perfil = isset($_POST['perfil']) ? $_POST['perfil'] : '';
+$name = isset($_POST['name']) ? $_POST['name'] : '';
+$lastname = isset($_POST['lastname']) ? $_POST['lastname'] : '';
+$phonenumber=isset($_POST['phonenumber']) ? $_POST['phonenumber']:'';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
+$menssage = isset($_POST['menssage']) ? $_POST['menssage'] : '';
 
+
+if ($phonenumber === false || strlen($phonenumber) > 15) {
+    die('Número de teléfono inválido.');
+}
 // Inserta los datos en la tabla correspondiente
 $sql = "INSERT INTO menssagesuser (perfil,name, lastname, phonenumber,email, menssage) 
         VALUES ('$perfil', '$name', '$lastname','$phonenumber', '$email', '$menssage')";

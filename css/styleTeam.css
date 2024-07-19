@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  background-color: rgb(0, 0, 0);
+}
+/* -------barra de navegacion------------------- */
+#navBar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+nav {
+  background-color: #4089b3;
+  color: #000;
+}
+
+nav button:hover {
+  background-color: #4089b3;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.6);
+  translate: x 5px;
+  transform: translate(1px, 1px);
+}
+/*------avatar---------*/
+
+/* .avatar{
+  background-color: aqua;
+  height: 200px;
+  width: 200px;
+  border-style: dashed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.avatar img {
+  margin-right: 15px;
+  max-width: 100%; 
+  height: auto;
+}
+.avatarP:hover{
+  border-radius: 10px;
+  filter: grayscale(80%);
+  cursor: pointer;
+}
+.rol{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+} */
+.avatar {
+  padding: 10px; /* Padding alrededor del contenedor */
+  text-align: center; /* Centrar el contenido */
+  position: relative;
+  overflow: hidden; 
+  border-radius: 12px;
+  /* Prevenir desbordamiento del contenido */
+  
+}
+.avatar img {
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgb(34, 118, 196);
+  max-width: 100%; /* La imagen no debe exceder el tamaño del contenedor */
+  height: auto; /* Altura automática para mantener la proporción */
+  transition: transform 0.3s; /* Transición suave para el hover */
+}
+.avatar img:hover {
+  border-radius: 12%;
+  transform: scale(1.0);
+  filter: grayscale(80%); /* Efecto de zoom en hover */
+}
+.rol {
+  word-wrap: break-word; /* Ajustar el texto al contenedor */
+  overflow: hidden; /* Prevenir desbordamiento del contenido */
+  text-overflow: ellipsis; /* Agregar puntos suspensivos si el texto es demasiado largo */
+  transition: opacity 0.5s; /* Transición suave para mostrar/ocultar el texto */
+  opacity: 0; /* Texto inicialmente oculto */
+  max-height: 0; /* Altura inicial cero para ocultar */
+}
+.rol.show {
+  font-size: 18px;
+  opacity: 1; /* Mostrar el texto */
+  max-height: 100px;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  }
+
+/*--------------------------------------------------*/
+.uno{
+  background-color: aqua;
+}
+.dos{
+  background-color: black;
+}
+.tres{
+  background-color: yellowgreen;
+}
+.cuatro{
+  background-color: violet;
+}
+.cinco{
+  background-color: blue;
+}

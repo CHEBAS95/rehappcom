@@ -32,9 +32,9 @@
           mejoras en nuestra aplicación? ¿Tienes dudas, sugerencias...?
         </p>
         <p>La comunicación contigo es nuestra inspiración para mejorar.</p>
-        <form action="database/forms/form.php" method="get">
+        <form action="database/forms/form.php" method="post">
           <select class="form-select" aria-label="Default select example" name="perfil">
-            <option selected>Selecciona una opción</option>
+            <option selected disabled>Selecciona una opción</option>
             <option value="1">Terapeuta de mano</option>
             <option value="2">Fisioterapeuta/kinesiólogo</option>
             <option value="3">Paciente</option>
@@ -55,7 +55,7 @@
           </div>
           <div class="mb-3">
             <label for="number" class="form-label">numero de contacto</label>
-            <input type="number" name="phonenumber" class="form-control" id="number" placeholder="ingresa tu numero"
+            <input type="tel" name="phonenumber" class="form-control" id="number" placeholder="ingresa tu numero"
               required />
           </div>
           <div class="mb-3">
@@ -78,7 +78,7 @@
           </div>
           <div class="modal-footer">
             <button type="submit">Enviar</button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            <button type="button"  data-bs-dismiss="modal">
               Cerrar
             </button>
           </div>
@@ -165,7 +165,7 @@
             acerca de :
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#ancla1">nosotros</a></li>
+            <li><a class="dropdown-item" href="team.html">nosotros</a></li>
             <li><a class="dropdown-item" href="#ancla2">app</a></li>
             <li>
               <hr class="dropdown-divider">
@@ -201,7 +201,7 @@
             <p class="overlay-text">nos centramos en nuestras herraminetas de trabajo</p>
           </div>
           <div class="card-body">
-            
+
           </div>
         </div>
       </div>
@@ -213,7 +213,7 @@
             <p class="overlay-text">esta es una descripvion. lorem*15</p>
           </div>
           <div class="card-body">
-    
+
           </div>
         </div>
       </div>
@@ -231,7 +231,7 @@
             </ul>
           </div>
           <div class="card-body">
-    
+
           </div>
         </div>
       </div>
@@ -255,15 +255,15 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="img/terapia-manual.jpg" class="d-block w-100" alt="...">
+              <img src="img/terapia-manual.jpg" class="d-block w-100 h-100" alt="...">
               <div class="carousel-caption">
                 <h5>Rutinas desde casa</h5>
                 <p class="d-none d-sm-block">no tienes que salir de tu casa para realizar rutinas , con tu disposotivo
-                  movil puedes acceder a ellas desde tu cas</p>
+                  movil puedes acceder a ellas desde tu casa</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="img/terapia-manual.jpg" class="d-block w-100" alt="...">
+              <img src="img/wallpaper/Fondo1.jpg" class="d-block w-100 h-100" alt="...">
               <div class="carousel-caption">
                 <h5>Guarda tu progreso</h5>
                 <p class="d-none d-sm-block">manejamos un historial que te indica donde quedaste y donde debes seguir
@@ -271,10 +271,10 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img src="img/terapia-manual.jpg" class="d-block w-100" alt="...">
+              <img src="img/terapia-manual.jpg" class="d-block w-100 h-100" alt="...">
               <div class="carousel-caption">
                 <h5>¿otra aplicacion mas?</h5>
-                <p class="d-none d-sm-block">Detras del desarrollo hay una selecion de rutinas ;ademas cuentaas con
+                <p class="d-none d-sm-block">Detras del desarrollo hay una selecion de rutinas ;ademas cuentas con
                   profesionales a tu alcance
                 </p>
               </div>
@@ -308,7 +308,24 @@
     </div>
   </section>
 </div>
+<!-- prueba -->
 
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="imageModalLabel">Imagen</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="" id="modalImage" class="img-fluid" alt="Imagen">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- fin prueba -->
 <!-- seccion2 ya seccion verde -->
 <div class="container-fluid">
   <section class="infoR">
@@ -328,7 +345,7 @@
 
         <h5>mas que una aplicacion movil</h5>
       </div>
-      <div class="col-12 col-md-9 " id="carousel">
+      <!-- <div class="col-12 col-md-9 " id="carousel">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -361,50 +378,55 @@
           </button>
         </div>
 
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
 <!-- seccion 4  tarjetas  ya interfaz de celuylar-->
+<!-- interaz movil -->
 <div class="container-fluid tree p-5 text-center" name="ancla2" id="ancla2">
-  <h2 class=" text-center">REHABILITACION</h2>
-  <h5 class="text-center">conoce la App</h5>
-  <div class="row">
+  <h2 class="text-center">REHABILITACION</h2>
+  <h5 class="text-center">Conoce la App</h5>
+  <p>En la aplicacion tendras un acceso y uso facil de usar ,la aplicacion esta seccionada  por modulos los cuales 
+    son faciles de entender por lo que hace una navegacion facil
+  </p>
+  <div class="row second-section">
     <div class="col-sm-12 col-md-6 col-lg-3">
-      <div class="card rounded" style="width: 18rem;">
-        <img src="img/interfaz/intefazCel-removebg-preview.png" class="card-img-top" alt="...">
+      <div class="card rounded">
+        <img src="img/interfaz/Inicio de Sesión.svg" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text">inicio de sesion</p>
+          <p class="card-text">Inicio de sesión</p>
         </div>
       </div>
     </div>
     <div class="col-sm-12 col-md-6 col-lg-3">
-      <div class="card rounded" style="width: 18rem;">
-        <img src="img/interfaz/intefazCel-removebg-preview.png" class="card-img-top" alt="...">
+      <div class="card rounded">
+        <img src="img/interfaz/Group 12-1.svg" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text">terapias disponibles</p>
+          <p class="card-text">Terapias disponibles</p>
         </div>
       </div>
     </div>
     <div class="col-sm-12 col-md-6 col-lg-3">
-      <div class="card rounded" style="width: 18rem;">
-        <img src="img/interfaz/intefazCel-removebg-preview.png" class="card-img-top" alt="...">
+      <div class="card rounded">
+        <img src="img/interfaz/Notificaciones.svg" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text">progreso</p>
+          <p class="card-text">Progreso</p>
         </div>
       </div>
     </div>
     <div class="col-sm-12 col-md-6 col-lg-3">
-      <div class="card rounded" style="width: 18rem;">
-        <img src="img/interfaz/intefazCel-removebg-preview.png" class="card-img-top" alt="...">
+      <div class="card rounded">
+        <img src="img/interfaz/Modulo3.3.svg" class="card-img-top" alt="..." data-toggle="modal"
+          data-target="#imageModal">
         <div class="card-body">
-          <p class="card-text">sesiones personalizadas</p>
+          <p class="card-text">Sesiones personalizadas</p>
         </div>
       </div>
     </div>
   </div>
-
 </div>
+
 <!-- seccion 5  video cuadrar video-->
 <div class="container-fluid" id="seccion4">
   <div class="container-fluid" id="outVideo">
@@ -515,6 +537,7 @@
   <!--boostraop v5.0.2-->
   <script src="js/main.js" enabled></script>
   <script src="libs/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </body>
 
 </html>

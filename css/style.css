@@ -55,11 +55,24 @@ nav button:hover {
 }
 /*-------------------------------*/
 .primera_seccion{
-  background-image: url(/img/wallpaper/Fondo1.jpg);
+  background-image: url(https://ar.pinterest.com/pin/4433299626834802/);
  background-size: cover;
  background-position: center; 
 }
-
+/*-------corrusel---------------*/
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.carousel-item {
+  height: 500px; /* Ajusta esta altura según tus necesidades */
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor sin distorsión */
+}
 /* .align-items-center{
  background-color: rgba(129, 221, 119, 0.031);
  display: grid;
@@ -84,9 +97,22 @@ nav button:hover {
  background-color: rgba(255, 255, 255, 0.7);
  padding: 10px;
 }
-
-
-
+/*--------secccion de tarjetas---------------*/
+/* Estilos generales para las tarjetas */
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+}
+/* Estilos específicos para las imágenes en la segunda sección */
+.second-section .card-img-top {
+  object-fit: cover;
+}
+.second-section .card-img-top:hover {
+  transform: scale(1.9);
+  transition: transform 0.9s ease;
+  object-fit: contain;
+}
 .image-container:hover .overlay-text {
  display: block;
 }
@@ -109,9 +135,9 @@ section div.justify-content-center > :nth-child(3):hover {
 
 
 /*-------------------------------*/
-#tree{
-  background-color: rgb(165,179,160);
-  linear-gradient(90deg, rgba(165,179,160,0.7791491596638656) 16%, rgba(35,171,53,0.6194852941176471) 89%);
+.tree{
+  background-color: rgb(48, 100, 167);
+  
 }
 /*-------------------------------*/
 
@@ -319,7 +345,7 @@ section div.justify-content-center > :nth-child(3):hover {
   max-width: calc(100% - 90px);
   outline: none;
   border: 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 12px;
 }
 
